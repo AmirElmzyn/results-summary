@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* Primary Colors */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Neutral Colors */
+    --my-white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* Gradient Colors */
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+}
+body {
+    height: 100vh;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--pale-blue);
+    font-family: "Hanken Grotesk", sans-serif;
+}
+.container {
+    display: grid;
+    max-width: 550px;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+.left {
+    display: flex;
+    padding: 30px 35px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background: linear-gradient(180deg, var(--light-slate-blue) 0%, var(--light-royal-blue) 100%);
+}
+.result {
+    opacity: 0.9;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--light-lavender);
+}
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background: linear-gradient(180deg, var(--violet-blue) 0%, var(--persian-blue) 100%);
+}
+.big {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 800;
+    color: var(--my-white);
+    line-height: 1;
+}
+
+.small {
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0.7;
+    text-align: center;
+    color: var(--light-lavender);
+    margin-top: 5px;
+}
+.great {
+    margin: 15px 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--my-white);
+}
+.score {
+    opacity: 0.9;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--light-lavender);
+    line-height: 1.4;
+}
+.right {
+    width: 100%;
+    padding: 30px;
+    background-color: var(--my-white);
+}
+.right p {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--dark-gray-blue);
+}
+.box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.reaction,
+.memory,
+.verbal,
+.visual {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 20px 10px;
+    text-align: center;
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
+.name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.name img{
+    margin-right: 10px;
+}
+.num {
+    color: black;
+    font-size: 13px;
+    font-weight: 700;
+}
+.num span {
+    opacity: 0.7;
+    color: var(--dark-gray-blue);
+}
+.reaction {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+.reaction .name {
+    color: var(--Light-red);
+}
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+.memory .name {
+    color: var(--Orangey-yellow);
+}
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+.verbal .name {
+    color: var(--Green-teal);
+}
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+.visual .name {
+    color: var(--Cobalt-blue);
+}
+button {
+    width: 100%;
+    height: 45px;
+    border: none;
+    margin-top: 20px;
+    border-radius: 50px;
+    color: var(--my-white);
+    background-color: var(--dark-gray-blue);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background: linear-gradient(180deg, var(--light-slate-blue) 0%, var(--light-royal-blue) 100%);
+}
+
+@media (max-width: 768px) {
+    body{
+        height: 120vh;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 60%;
+        margin: 20px;
+    }
+    .left {
+        border-radius: 0 0 20px 20px;
+    }
+}
