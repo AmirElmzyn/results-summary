@@ -22,6 +22,10 @@
     --violet-blue: hsla(256, 72%, 46%, 1);
     --persian-blue: hsla(241, 72%, 46%, 0);
 }
+::selection{
+    color: var(--dark-gray-blue) ;
+    background-color: var(--light-lavender);
+}
 body {
     height: 100vh;
     display: flex;
@@ -189,17 +193,38 @@ button {
 button:hover {
     background: linear-gradient(180deg, var(--light-slate-blue) 0%, var(--light-royal-blue) 100%);
 }
+footer {
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    pointer-events: none;
+    background-color: transparent;
+    color: hsla(224, 30%, 27%, 0.7);
+}
 
+footer span {
+    font-weight: 800;
+    color: var(--dark-gray-blue);
+}
+
+footer::selection {
+    background-color: var(--Purple-600);
+    color: var(--Purple-100);
+}
 @media (max-width: 768px) {
     body{
         height: 120vh;
     }
     .container {
         grid-template-columns: 1fr;
-        max-width: 60%;
+        max-width: 80%;
         margin: 20px;
     }
     .left {
         border-radius: 0 0 20px 20px;
+    }
+    button {
+        margin-top: -2px;
     }
 }
